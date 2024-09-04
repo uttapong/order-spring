@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: orders
+  name: payments
   labels:
-    app: orders
+    app: payments
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: orders
+      app: payments
   template:
     metadata:
       labels:
-        app: orders
+        app: payments
         version: $IMAGE_TAG
     spec:
       containers:
-      - name: orders
-        image: maxca789/orders:$IMAGE_TAG
+      - name: payments
+        image: uttapong/payments:$IMAGE_TAG
         ports:
         - containerPort: 8082
         resources:
