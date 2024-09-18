@@ -1,5 +1,5 @@
 # Use an official OpenJDK runtime as a parent image
-FROM openjdk:24-rc-jdk-slim
+FROM openjdk:23-rc-jdk-slim
  
 # Install curl
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
